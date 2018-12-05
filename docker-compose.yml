@@ -1,0 +1,14 @@
+version: "2"
+services:
+  interface-dev:
+    build: .
+    volumes:
+    - ./hosts:/srv/www/
+    networks:
+    - reverse-proxy
+    environment:
+      VIRTUAL_HOST: test.s3.obvu.ru
+networks:
+  reverse-proxy:
+    external:
+      name: reverse-proxy

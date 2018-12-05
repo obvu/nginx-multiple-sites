@@ -7,7 +7,7 @@ services:
     networks:
     - reverse-proxy
     environment:
-      VIRTUAL_HOST: test.s3.obvu.ru
+      VIRTUAL_HOST: ${DOMAINS}
 networks:
   reverse-proxy:
     external:
